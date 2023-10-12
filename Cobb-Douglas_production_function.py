@@ -10,10 +10,10 @@ import statsmodels.formula.api as smf
 from statsmodels.formula.api import ols
 
 
-data = pd.read_stata("/Users/martinfranco/Desktop/Universität/Mikroökonomik/Applied Microeconometrics/Exercises/dta/production.dta")
-data.to_csv("/Users/martinfranco/Desktop/Universität/Mikroökonomik/Applied Microeconometrics/Exercises/dta/production.dta")
+url = "https://github.com/MartinFrancoIrabedra/Cobb-Douglas_production_function_regression/blob/main/Data/production.dta"
+data = pd.read_stata(url, index_col=0)
+data.to_csv(url)
 print(data)
-
 
 ####focus on only year 1958.
 year1958 = data[data["year"] == 58]
